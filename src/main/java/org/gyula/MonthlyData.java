@@ -12,6 +12,7 @@ public class MonthlyData {
     private double electricityLast;
     private double electrictiyPresent;
 
+
     public MonthlyData(String address, String subtenant, double rent, double commonCosts, double baseFeeGas, double baseFeeElectricity,
                        double gasLast, double gasPresent, double electricityLast, double electrictiyPresent) {
         this.address = address;

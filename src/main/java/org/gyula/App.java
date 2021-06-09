@@ -10,6 +10,7 @@ import java.sql.*;
 
 
 import java.io.IOException;
+import java.util.Objects;
 
 /**
  * JavaFX App
@@ -36,18 +37,7 @@ public class App extends Application {
     }
 
     public static void main(String[] args) throws SQLException {
-            Connection conn = DriverManager.getConnection(Constants.DB_URL, Constants.DB_USERNAME, Constants.DB_PASSWORD);
-
-        Statement statement = conn.createStatement();
-        ResultSet results = statement.executeQuery("select * from " + Constants.TABLE_LAKAS);
-//        while (results.next()){
-//            System.out.println(results.getString("Cim") + "\t" +
-//                    results.getString("Lako") + "\t" +
-//                    results.getString("Lakber"));
-//        }
-
-        launch()
-        ;
+        launch();
     }
 
 }

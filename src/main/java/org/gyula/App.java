@@ -20,7 +20,8 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 1024, 768);
+        scene = new Scene(loadFXML("primary"), 500, 250);
+        stage.setTitle("Lakás kiválasztása");
         stage.setScene(scene);
         stage.show();
     }
@@ -39,11 +40,11 @@ public class App extends Application {
 
         Statement statement = conn.createStatement();
         ResultSet results = statement.executeQuery("select * from " + Constants.TABLE_LAKAS);
-        while (results.next()){
-            System.out.println(results.getString("Cim") + "\t" +
-                    results.getString("Lako") + "\t" +
-                    results.getString("Lakber"));
-        }
+//        while (results.next()){
+//            System.out.println(results.getString("Cim") + "\t" +
+//                    results.getString("Lako") + "\t" +
+//                    results.getString("Lakber"));
+//        }
 
         launch()
         ;

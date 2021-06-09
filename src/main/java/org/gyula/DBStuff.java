@@ -29,7 +29,7 @@ public class DBStuff {
     public static MonthlyData getDataForInvoice(String address) throws SQLException {
         ResultSet resultsLakas = createStatement().executeQuery("select * from " + Constants.TABLE_LAKAS + " WHERE CIM = " + address);
         MonthlyData md = new MonthlyData(address, resultsLakas.getString("LAKO"), resultsLakas.getString("LAKBER"), resultsLakas.getString("KOZOSKOLTSEG"),
-                resultsLakas.getString("GAZALAPDIJ"), resultsLakas.getString("VILLANYALAPDIJ"), );
+                resultsLakas.getString("GAZALAPDIJ"), resultsLakas.getString("VILLANYALAPDIJ"), 0.1,);
         createStatement().close();
         return md;
     }

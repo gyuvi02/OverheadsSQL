@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0" stylesheets="@mainPageCSS.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gyula.MainPageController">
+   <children>
+      <Label text="Válasszon lakást a legördülő menüből">
+         <font>
+            <Font name="Century" size="17" />
+         </font>
+      </Label>
+      <MenuButton fx:id="pickFlat" alignment="CENTER" minHeight="-Infinity" mnemonicParsing="false" prefHeight="29.0" prefWidth="270.0" snapToPixel="false" text="Lakás kiválasztása" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+
+      </MenuButton>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="67.0" prefWidth="288.0">
+         <children>
+            <Button fx:id="addData" alignment="CENTER" mnemonicParsing="false" text="Óraállás" onAction="#addData" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin></Button>
+            <Button alignment="CENTER" mnemonicParsing="false" text="Button" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin></Button>
+            <Button fx:id="quitButton" alignment="CENTER" minHeight="-Infinity" onAction="#quit" prefHeight="26.0" text="Kilépés" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin></Button>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

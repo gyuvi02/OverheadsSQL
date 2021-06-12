@@ -1,6 +1,7 @@
 package org.gyula;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -21,11 +22,17 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 500, 250);
+        scene = new Scene(loadFXML("mainPage"), 500, 250);
         stage.setTitle("Lakás kiválasztása");
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
     }
+
+    public static void exit() {
+        System.exit(0);
+    }
+
 
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
@@ -37,6 +44,8 @@ public class App extends Application {
     }
 
     public static void main(String[] args) throws SQLException {
+        System.out.println(DBStuff.getFlatList());
+        System.out.println(DBStuff.getDataForInvoice("4032 Debrecen Bem tér 8.").getGasLastDate());
         launch();
     }
 

@@ -1,8 +1,8 @@
 .root{
     -fx-font-family: "Century";
-    -fx-font-size: 18;
+    -fx-font-size: 14;
     -fx-font-weight: bold;
-    -fx-background-color: #FDFCDB;
+    -fx-background-color: #f7f7ed;
 }
 
 /*#szamlaLista{*/
@@ -12,10 +12,11 @@
 /*    !*-fx-background-color: #EEF1F2;*!*/
 /*}*/
 .button{
-    -fx-font-weight: bold;
+    /*-fx-font-size: 14;*/
+    /*-fx-font-weight: bold;*/
     -fx-background-color: #000000,
     linear-gradient(#fafdfe, #e8f5fc),
-    linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #4CB061 100%);
+    linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #91e3a2 100%);
     -fx-background-insets: 0,1,2;
     -fx-background-radius: 30;
     -fx-padding: 3 30 3 30;
@@ -24,10 +25,11 @@
 }
 
 .menu-button {
-    -fx-font-weight: bold;
+    /*-fx-font-size: 12;*/
+    /*-fx-font-weight: bold;*/
     -fx-background-color: #000000,
     linear-gradient(#fafdfe, #e8f5fc),
-    linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #4CB061 100%);
+    linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #91e3a2 100%);
     -fx-background-insets: 0,1,2;
     -fx-background-radius: 30;
     -fx-padding: 3 30 3 30;
@@ -36,16 +38,15 @@
 }
 
 
-
 .button:hover{
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
 }
-.text-area {
-     -fx-border-color: #ACB8E8;
-     -fx-border-width: 1.5;
-    -fx-font-weight: bold;
- }
+/*.text-area {*/
+/*     -fx-border-color: #ACB8E8;*/
+/*     -fx-border-width: 1.5;*/
+/*    -fx-font-weight: bold;*/
+/* }*/
 
  /*#gombsor{*/
  /*    -fx-background-color: rgba(191, 245, 252, 0.2);*/

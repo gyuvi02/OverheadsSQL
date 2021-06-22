@@ -2,7 +2,8 @@ package org.gyula;
 
 import java.sql.Date;
 
-public class MonthlyData {
+//We always have only one instance of this class, so it can be singleton
+public final class MonthlyData {
     private String address;
     private String subtenant;
     private double rent;

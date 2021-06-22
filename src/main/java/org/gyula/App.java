@@ -1,17 +1,13 @@
 package org.gyula;
 
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.sql.*;
-
-
 import java.io.IOException;
-import java.util.Objects;
+import java.sql.SQLException;
 
 /**
  * JavaFX App
@@ -46,6 +42,10 @@ public class App extends Application {
     public static void main(String[] args) throws SQLException {
         System.out.println(DBStuff.getFlatList());
         System.out.println(DBStuff.getDataForInvoice("4032 Debrecen Bem tér 8.").getGasLastDate());
+        System.out.println(DBStuff.getDataForInvoice("4032 Debrecen Bem tér 8.").getGasLast());
+        System.out.println(DBStuff.getDataForInvoice("4032 Debrecen Bem tér 8.").getElectricityLastDate());
+        System.out.println(DBStuff.getDataForInvoice("4032 Debrecen Bem tér 8.").getElectricityLast());
+
         launch();
     }
 

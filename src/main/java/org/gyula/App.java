@@ -34,17 +34,21 @@ public class App extends Application {
         scene.setRoot(loadFXML(fxml));
     }
 
-    private static Parent loadFXML(String fxml) throws IOException {
+    public static Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();
     }
 
     public static void main(String[] args) throws SQLException {
-        System.out.println(DBStuff.getFlatList());
-        System.out.println(DBStuff.getDataForInvoice("4032 Debrecen Bem tér 8.").getGasLastDate());
-        System.out.println(DBStuff.getDataForInvoice("4032 Debrecen Bem tér 8.").getGasLast());
-        System.out.println(DBStuff.getDataForInvoice("4032 Debrecen Bem tér 8.").getElectricityLastDate());
-        System.out.println(DBStuff.getDataForInvoice("4032 Debrecen Bem tér 8.").getElectricityLast());
+        MonthlyData lakas = DBStuff.getDataForInvoice("4032 Debrecen Komlóssy út 62.");
+        double aktualisGaz = 3587.233;
+        double elozoGaz = lakas.getGasLast();
+        int kulonbseg = (int) Math.round((aktualisGaz - elozoGaz) * 100);
+        System.out.println("Fogyasztás: " + (double) kulonbseg/100);
+        System.out.println(lakas.getGasLastDate());
+        System.out.println(aktualisGaz);
+        System.out.println(lakas.getElectricityLastDate());
+        System.out.println(lakas.getElectricityLast());
 
         launch();
     }

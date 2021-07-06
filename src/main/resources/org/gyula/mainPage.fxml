@@ -12,7 +12,7 @@
             <Font name="Century" size="17" />
          </font>
       </Label>
-      <MenuButton fx:id="pickFlat" alignment="CENTER" minHeight="-Infinity" mnemonicParsing="false" prefHeight="29.0" prefWidth="270.0" snapToPixel="false" text="Lakás kiválasztása" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+      <MenuButton fx:id="pickFlat" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="270.0" snapToPixel="false" text="Lakás kiválasztása" textAlignment="CENTER" VBox.vgrow="ALWAYS">
         <items>
           <MenuItem mnemonicParsing="false" text="Action 1" />
           <MenuItem mnemonicParsing="false" text="Action 2" />
@@ -21,15 +21,15 @@
       </MenuButton>
       <HBox alignment="BOTTOM_CENTER" prefHeight="67.0" prefWidth="288.0">
          <children>
-            <Button fx:id="addData" alignment="CENTER" mnemonicParsing="false" text="Óraállás" onAction="#addData" textAlignment="CENTER">
+            <Button fx:id="addData" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addData" text="Óraállás" textAlignment="CENTER">
                <HBox.margin>
                   <Insets left="20.0" right="20.0" />
                </HBox.margin></Button>
-            <Button alignment="CENTER" mnemonicParsing="false" text="Button" textAlignment="CENTER">
+            <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Szerkesztés" textAlignment="CENTER">
                <HBox.margin>
                   <Insets left="20.0" right="20.0" />
                </HBox.margin></Button>
-            <Button fx:id="quitButton" alignment="CENTER" minHeight="-Infinity" onAction="#quit" prefHeight="26.0" text="Kilépés" textAlignment="CENTER">
+            <Button fx:id="quitButton" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" onAction="#quit" prefHeight="26.0" text="Kilépés" textAlignment="CENTER">
                <HBox.margin>
                   <Insets left="20.0" right="20.0" />
                </HBox.margin></Button>

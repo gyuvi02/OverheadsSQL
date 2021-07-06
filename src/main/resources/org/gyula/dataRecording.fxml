@@ -1,16 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Button?>
-<?import javafx.geometry.Insets?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="20.0" stylesheets="@mainPageCSS.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gyula.DataRecordingController">
-    <children>
-        <Label text="Secondary View" />
-        <Button fx:id="quitButton" text="Vissza" onAction="#returnMain" />
-    </children>
+<VBox alignment="CENTER" fillWidth="false" prefHeight="600.0" prefWidth="520.0" spacing="20.0" stylesheets="@mainPageCSS.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gyula.DataRecordingController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
+    <GridPane prefHeight="560.0" prefWidth="480.0">
+      <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.33333333333334" minWidth="10.0" prefWidth="255.33333333333334" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="277.0" minWidth="10.0" prefWidth="225.33333333333334" />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+      <children>
+         <Label fx:id="address" alignment="CENTER" contentDisplay="CENTER" text="Label" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+         <Label text="Az előző gázóra-állás:" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+         <Label layoutX="101.0" layoutY="113.0" text="A jelenlegi gázóra-állás:" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+         <Label layoutX="74.0" layoutY="113.0" text="Az előző villanyóra-állás:" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+         <Label layoutX="58.0" layoutY="189.0" text="A jelenlegi villanyóra-állás:" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+         <Label text="Az elfogyasztott gáz mennyisége:" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+         <Label layoutX="27.0" layoutY="232.0" text="Az elfogyasztott villany mennyisége:" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+      </children>
+    </GridPane>
+    <HBox alignment="CENTER" prefHeight="60.0" prefWidth="460.0">
+        <VBox.margin>
+          <Insets bottom="-10.0" />
+        </VBox.margin>
+        <children>
+            <Button fx:id="saveButton" alignment="CENTER" onAction="#saveData" text="Mentés" textAlignment="CENTER">
+                <HBox.margin>
+                    <Insets right="50.0" />
+                </HBox.margin>
+          </Button>
+          <Button fx:id="returnButton" alignment="CENTER" layoutX="189.0" layoutY="19.0" onAction="#returnMain" text="Vissza" textAlignment="CENTER" />
+        </children>
+    </HBox>
 </VBox>

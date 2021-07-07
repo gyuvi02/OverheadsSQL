@@ -3,15 +3,16 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" fillWidth="false" prefHeight="600.0" prefWidth="520.0" spacing="20.0" stylesheets="@mainPageCSS.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gyula.DataRecordingController">
+<VBox alignment="CENTER" fillWidth="false" prefHeight="550.0" prefWidth="520.0" spacing="20.0" stylesheets="@mainPageCSS.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gyula.DataRecordingController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
     <GridPane prefHeight="560.0" prefWidth="480.0">
       <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.33333333333334" minWidth="10.0" prefWidth="255.33333333333334" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="277.0" minWidth="10.0" prefWidth="225.33333333333334" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="255" minWidth="10.0" prefWidth="255" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="277.0" minWidth="10.0" prefWidth="225" />
       </columnConstraints>
       <rowConstraints>
          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -24,13 +25,46 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       </rowConstraints>
       <children>
-         <Label fx:id="address" alignment="CENTER" contentDisplay="CENTER" text="Label" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+         <Label fx:id="address" alignment="CENTER" contentDisplay="CENTER" text="Label" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <font>
+               <Font name="Century" size="18.0" />
+            </font></Label>
          <Label text="Az előző gázóra-állás:" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
          <Label layoutX="101.0" layoutY="113.0" text="A jelenlegi gázóra-állás:" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
          <Label layoutX="74.0" layoutY="113.0" text="Az előző villanyóra-állás:" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
          <Label layoutX="58.0" layoutY="189.0" text="A jelenlegi villanyóra-állás:" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
          <Label text="Az elfogyasztott gáz mennyisége:" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
          <Label layoutX="27.0" layoutY="232.0" text="Az elfogyasztott villany mennyisége:" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+         <TextField fx:id="actualGas" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <GridPane.margin>
+               <Insets left="10.0" right="50.0" />
+            </GridPane.margin>
+         </TextField>
+         <Label fx:id="formerGas" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets left="10.0" right="50.0" />
+            </GridPane.margin>
+         </Label>
+         <Label fx:id="formerElectricity" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <GridPane.margin>
+               <Insets left="10.0" right="50.0" />
+            </GridPane.margin>
+         </Label>
+         <TextField fx:id="actualElectricity" layoutX="276.0" layoutY="149.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <GridPane.margin>
+               <Insets left="10.0" right="50.0" />
+            </GridPane.margin>
+         </TextField>
+         <Label fx:id="gasConsumption" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <GridPane.margin>
+               <Insets left="10.0" right="50.0" />
+            </GridPane.margin>
+         </Label>
+         <Label fx:id="electricityConsumption" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <GridPane.margin>
+               <Insets left="10.0" right="50.0" />
+            </GridPane.margin>
+         </Label>
       </children>
     </GridPane>
     <HBox alignment="CENTER" prefHeight="60.0" prefWidth="460.0">

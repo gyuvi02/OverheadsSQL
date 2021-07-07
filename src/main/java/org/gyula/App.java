@@ -23,6 +23,7 @@ public class App extends Application {
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
+
     }
 
     public static void exit() {
@@ -40,15 +41,15 @@ public class App extends Application {
     }
 
     public static void main(String[] args) throws SQLException {
-        MonthlyData lakas = DBStuff.getDataForInvoice("4032 Debrecen Komlóssy út 62.");
-        double aktualisGaz = 3587.233;
-        double elozoGaz = lakas.getGasLast();
-        int kulonbseg = (int) Math.round((aktualisGaz - elozoGaz) * 100);
-        System.out.println("Fogyasztás: " + (double) kulonbseg/100);
-        System.out.println(lakas.getGasLastDate());
-        System.out.println(aktualisGaz);
-        System.out.println(lakas.getElectricityLastDate());
-        System.out.println(lakas.getElectricityLast());
+//        MonthlyData lakas = DBStuff.getDataForInvoice("4032 Debrecen Komlóssy út 62.");
+//        double aktualisGaz = 3587.233;
+//        double elozoGaz = lakas.getGasLast();
+//        int kulonbseg = (int) Math.round((aktualisGaz - elozoGaz) * 100);
+//        System.out.println("Fogyasztás: " + (double) kulonbseg/100);
+//        System.out.println(lakas.getGasLastDate());
+//        System.out.println(aktualisGaz);
+//        System.out.println(lakas.getElectricityLastDate());
+//        System.out.println(lakas.getElectricityLast());
 
         launch();
     }

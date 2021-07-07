@@ -24,9 +24,7 @@
     -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 7,0,0,3 );
 }
 
-.menu-button {
-    /*-fx-font-size: 12;*/
-    /*-fx-font-weight: bold;*/
+.combo-box{
     -fx-background-color: #000000,
     linear-gradient(#fafdfe, #e8f5fc),
     linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #91e3a2 100%);
@@ -36,6 +34,19 @@
     -fx-text-fill: black;
     -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 7,0,0,3 );
 }
+
+/*.menu-button {*/
+/*    !*-fx-font-size: 12;*!*/
+/*    !*-fx-font-weight: bold;*!*/
+/*    -fx-background-color: #000000,*/
+/*    linear-gradient(#fafdfe, #e8f5fc),*/
+/*    linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #91e3a2 100%);*/
+/*    -fx-background-insets: 0,1,2;*/
+/*    -fx-background-radius: 30;*/
+/*    -fx-padding: 3 30 3 30;*/
+/*    -fx-text-fill: black;*/
+/*    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 7,0,0,3 );*/
+/*}*/
 
 
 .button:hover{

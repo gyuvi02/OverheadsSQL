@@ -33,10 +33,10 @@ public class DBStuff {
     public static MonthlyData getDataForInvoice(String address) throws SQLException {
         ResultSet resultsLakas = createStatement().executeQuery(
                 "SELECT DISTINCT l.Lako, l.LAKBER, l.KOZOSKOLTSEG, l.GAZALAPDIJ, l.VILLANYALAPDIJ, " +
-                        "(SELECT s.DATUM FROM (SELECT Datum FROM A_Gazora ORDER BY datum DESC) as s limit 1) as GORAALLAS_DATUM," +
-                        "(SELECT s.ORAALLAS FROM (SELECT ORAALLAS FROM A_Gazora ORDER BY datum DESC) as s limit 1) as REGI_GORAALLAS," +
-                        "(SELECT s.datum FROM (SELECT DATUM FROM A_Villanyora ORDER BY datum DESC) as s limit 1) as VORAALLAS_DATUM," +
-                        "(SELECT s.ORAALLAS FROM (SELECT oraallas FROM A_Villanyora ORDER BY datum DESC) as s limit 1) as REGI_VILLANYORAALLAS," +
+                        "(SELECT s.DATUM FROM (SELECT Datum FROM A_Gazora AG join A_Lakas AL on AL.ID = AG.lakasID where AL.Cim = '" + address + "'" + "order by datum DESC) as s limit 1) as GORAALLAS_DATUM," +
+                        "(SELECT s.ORAALLAS FROM (SELECT ORAALLAS FROM A_Gazora AG join A_Lakas AL on AL.ID = AG.lakasID where AL.Cim = '" + address + "'" + " ORDER BY datum DESC) as s limit 1) as REGI_GORAALLAS," +
+                        "(SELECT s.datum FROM (SELECT DATUM FROM A_Villanyora AV join A_Lakas AL on AL.ID = AV.lakasID where AL.Cim = '" + address + "'" + " ORDER BY datum DESC) as s limit 1) as VORAALLAS_DATUM," +
+                        "(SELECT s.ORAALLAS FROM (SELECT ORAALLAS FROM A_Villanyora AV join A_Lakas AL on AL.ID = AV.lakasID where AL.Cim = '" + address + "'" + " ORDER BY datum DESC) as s limit 1) as REGI_VILLANYORAALLAS," +
                         "e.gaz_ar, e.villany_ar" +
                 " FROM (SELECT * FROM " + Constants.TABLE_LAKAS + " WHERE CIM ='" + address + "'" + ")" + " l " +
                 " JOIN " + Constants.TABLE_EGYSEGARAK + " e ON e.LAKASID = l.ID " +
